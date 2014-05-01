@@ -1,0 +1,21 @@
+@(usuarioForm: Form[Usuario])
+@import helper._
+
+
+@main("Registro de Nuevo Usuario") {
+    
+    
+    <h2>Add a new User</h2>
+    
+    @form(routes.Registro.create()) {
+        
+        @inputText(usuarioForm("Nombre")) 
+        @inputText(usuarioForm("Apellido"))
+        @inputText(usuarioForm("Email"))
+        @inputText(usuarioForm("Contraseña"))
+        
+        <input type="submit" value="Create">
+        
+    }
+    
+}
